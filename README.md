@@ -1,0 +1,1 @@
+# Django_photoalbum_app
