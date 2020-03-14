@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2>Your photos</h2>
+    {% for photo in photos %}
+        {{ photo.path }}<br>
+        <a href='/photoalbum/{{ photo.id }}'>Photo details</a>
+    {% endfor %}
+{% endblock %}

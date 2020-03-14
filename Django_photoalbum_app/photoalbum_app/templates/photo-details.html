@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2>Photo details</h2>
+        <ul>
+            <li>{{ photo.path }}</li>
+            <li>{{ photo.creation_date }}</li>
+            <li>{{ photo.app_user }}</li>
+            <li>{{ photo.likes_counter }}</li>
+        </ul>
+{% endblock %}

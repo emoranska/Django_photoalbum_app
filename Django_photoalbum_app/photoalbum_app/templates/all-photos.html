@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2>Photo list</h2>
+    {% for photo in photos %}
+        {{ photo.path }}<br>
+        {{ photo.app_user }}<br>
+        {{ photo.creation_date }}<br>
+        {{ photo.likes_counter }}<br>
+        <button type="button" value="likes">Like it!</button>
+        <hr>
+    {% endfor %}
+    {% if user.is_authenticated %}
+        <h3>Add new photo</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Add">
+        </form>
+    {% endif %}
+{% endblock %}
